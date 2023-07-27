@@ -4,12 +4,13 @@ export class Searchbar extends Component {
   state = {
     query: '',
   };
-  handleSubmit = e => {
-    e.preventDefault();
+  handleSubmit = event => {
+    event.preventDefault();
     this.props.onSubmit(this.state.query);
+    this.setState({ query: '' });
   };
-  handleChange = e => {
-    this.setState({ query: e.target.value });
+  handleChange = event => {
+    this.setState({ query: event.target.value });
   };
   render() {
     return (

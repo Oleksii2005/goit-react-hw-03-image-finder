@@ -17,7 +17,7 @@ export const ImageGalleryItem = ({ image }) => {
     <>
       <li key={image.id} className={styled.imageGalleryItem}>
         <img
-          className={styled.imageGalleryItemImage}
+          className={styled.ImageGalleryItemImage}
           src={image.webformatURL}
           alt=""
           onClick={handleOpenModal}
